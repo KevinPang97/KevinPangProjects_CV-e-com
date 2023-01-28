@@ -1,0 +1,213 @@
+* {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("images/backgroundImg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.navbar {
+  padding-top: 0.5vh;
+  padding-bottom: 0.5vh;
+}
+.navbar * {
+  padding-top: 0px;
+  padding-bottom: 0.05vh;
+  margin-bottom: 1px;
+}
+.name {
+  position: relative;
+  font-weight: bold;
+  font-size: 2.5svw;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.name::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -20%;
+  background-image: linear-gradient(to right, limegreen, yellow);
+  width: 0;
+  height: 10%;
+  border-radius: 20px;
+  transition: 0.7s;
+  transition-timing-function: ease-out;
+}
+.name:hover::after {
+  width: 100%;
+}
+
+.navbar > div {
+  z-index: 1;
+  margin: 0px;
+}
+
+.navbar::after {
+  content: "";
+  z-index: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    lightgreen,
+    lightseagreen 10%,
+    lightgreen 30%
+  );
+  border-radius: 2px;
+  animation: navbarAnimation 4s infinite linear;
+}
+
+@keyframes navbarAnimation {
+  from {
+    background-position: 0;
+  }
+  to {
+    background-position: 100vw;
+  }
+}
+.navbar span {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.navbar-text {
+  padding-top: 0.5em;
+  padding-bottom: 0;
+  font-size: 1.2vw;
+  height: 5vh;
+}
+
+.btn {
+  font-size: 1.2vw;
+}
+
+#logoCv {
+  height: 4vw;
+  width: 6vw;
+}
+
+a {
+  text-decoration: none;
+}
+
+h3,
+h4,
+h5 {
+  font-family: "Times New Roman", Times, serif;
+  color: darkslategray;
+}
+
+h3 {
+  text-shadow: 1px 1px lightgray;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  border-bottom: 1px solid lightgreen;
+  font-size: 1.6vw;
+}
+
+h4 {
+  text-shadow: 1px 1px lightseagreen;
+  transition: 0.5s;
+  font-size: 1.5vw;
+}
+
+h5 {
+  font-size: 1.2vw;
+  font-weight: 600;
+}
+
+p,
+li {
+  font-family: "Times New Roman", Times, serif;
+  color: black;
+  font-weight: 200;
+  font-size: 1vw;
+}
+
+.section2 li {
+  font-weight: 600;
+}
+.content .col {
+  margin-bottom: 0.02vh;
+  margin-top: 1vh;
+}
+
+.col > * {
+  margin: 0;
+}
+
+.col {
+  padding-left: 2vw;
+}
+
+.section1,
+.section2,
+.section3,
+.section4 {
+  border: 1px solid lightgreen;
+  border-radius: 20px;
+  margin: 10px 10px 10px 10px;
+}
+.section2,
+.section3 .col,
+.section4 .col {
+  overflow: hidden;
+  position: relative;
+}
+
+.bgImg {
+  opacity: 0.1;
+  position: absolute;
+  width: 90%;
+  height: 80%;
+  top: 10%;
+  left: 5%;
+  object-fit: contain;
+  transition: 0.5s;
+}
+
+.section2:hover .bgImg {
+  transform: scale(1.1);
+  transform: rotate(45deg);
+  opacity: 0.2;
+}
+
+.section3_1:hover .bgImg,
+.section3_2:hover .bgImg,
+.section4_1:hover .bgImg,
+.section4_2:hover .bgImg {
+  transform: scale(1.1);
+  opacity: 0.05;
+}
+
+.section1:hover,
+.section2:hover,
+.section3_1:hover,
+.section3_2:hover,
+.section4_1:hover,
+.section4_2:hover {
+  background-color: honeydew;
+  border-radius: 20px;
+}
+
+.section3_1:hover h4,
+.section3_2:hover h4,
+.section4_1:hover h4,
+.section4_2:hover h4 {
+  transform: translate(5%, 0);
+}
+
+.tooltip-inner {
+  font-size: 0.8vw;
+  width: fit-content;
+  max-width: 10vw;
+  padding: 2px;
+}
